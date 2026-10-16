@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Recuperer le code source
-        uses: actions/checkout@v7.0.0
+        uses: actions/checkout@v4
 
       - name: installer nodejs
-        uses: actions/setup-node@v7.0.0
+        uses: actions/setup-node@v5
         with:
           node-version: '22'
           cache: 'npm'
