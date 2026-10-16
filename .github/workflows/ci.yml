@@ -22,7 +22,7 @@ jobs:
 
       - name: build frontend
         run: |
-          cd stock/frontend
+          cd stock/stock/frontend
           npm ci
           npm run build
 
