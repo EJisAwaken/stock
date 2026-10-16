@@ -76,7 +76,7 @@ jobs:
       - name: buildfrontend
         uses: docker/build-push-action@v6
         with:
-          context: ./frontend
+          context: ./frontend/
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/stock_frontend_prod:latest
@@ -108,10 +108,10 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v4
 
-      - name: buildfrontend
+      - name: build backend
         uses: docker/build-push-action@v6
         with:
-          context: ./backend
+          context: ./backend/
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/stock_backend_prod:latest
